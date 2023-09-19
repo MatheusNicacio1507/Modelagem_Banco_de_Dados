@@ -33,3 +33,55 @@ alter table leciona add constraint fkdis2 foreign key (fk_Disciplina_cod_discipl
 alter table leciona add constraint fkpro foreign key (fk_Professor_matricula) references Professor (matricula);
 
 alter table estuda modify fk_Turma_numero int not null;
+
+insert into aluno values (null, 'Ana Carolina', '2005-05-15', '123.456.789-03', 'Maria Carolina', 'ac@email.com');
+
+insert into aluno (matricula, nome, nascimento, cpf, responsavel, email) values (null, 'Elias Sherman', '1995-03-02', '123.456.789-04', 'John Sherman', 'es@email.com');
+
+insert into aluno (nome, cpf, responsavel) values ('Waldiney Mouse', '123.456.789-05', 'Wesley Keyboard');
+
+insert into aluno (cpf, matricula, nome, responsavel, email) values ('123.456.789-06', null, 'Genivaldo Williams', 'Clotilde Williams', 'gw@email.com');
+
+insert into turma values (2023080, 'M', 'Técnico de Informática');
+
+insert into turma values (2023090, 'T', 'Técnico em Comunicação Visual');
+
+insert into estuda values ( 7501, 3001, 2023090);
+
+insert into estuda values ( null, 3004, 2023080);
+
+insert into estuda values ( null, 3004, 2023090);
+
+insert into estuda values ( null, 3002, 2023090);
+
+insert into estuda values ( null, 3003, 2023090);
+
+insert into estuda values ( null, 3005, 2023080);
+
+insert into estuda values ( null, 3006, 2023080);
+
+insert into carro values (null, 'Toyota', 'Yaris', 'ABC1241');
+
+insert into disciplina values (50, 'Programação' );
+
+insert into disciplina values (null, 'Redes' );
+
+insert into disciplina values (null, 'Tratamento de Imagem' );
+
+insert into possui values (700, 50, 2023080);
+
+insert into possui values (null, 51, 2023080);
+
+insert into possui values (null, 52, 2023090);
+
+insert into professor values (4000, 'Sérgio', 'Tecnologia da Informação' );
+
+insert into professor values (null, 'Vicente', 'Tecnologia da Informação' );
+
+insert into professor values (null, 'Flávia', 'Comunicação Visual' );
+
+insert into leciona values (1100, 50, 4000);
+
+insert into leciona values (null, 51, 4001);
+
+insert into leciona values (null, 52, 4002);
