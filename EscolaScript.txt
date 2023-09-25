@@ -94,7 +94,7 @@ insert into possui values (null, 53, 2023080);
 
 insert into leciona values (null, 53, 4003);
 
-update professor set nome = 'Vicente Orsino' where matricula = 4001;
+update professor set nome = 'Vicente Orsino' where matricula = 4001; 
 
 update aluno set nascimento = '2007-07-18' where matricula = 3005;
 
@@ -119,3 +119,19 @@ insert into aluno values (null, 'Judite Presley', '1999-09-18', '123.456.789-07'
 insert into estuda values (null, 3007, 20223100);
 
 update disciplina set nome = 'Programação Python' where cod_disciplina = 50;
+
+insert into aluno values (null, 'Renata Mouse', '1995-03-15', '123.456.789-08', 'Wesley Keyboard', 'renatinha@email.com');
+
+update aluno set nome = 'Renata Mouse Silva' where matricula = 3008;
+
+insert into aluno values (null, 'Mouse Sherman Williams', '2015-09-12', '123.456.789-09', 'Cpu Sherman', null);
+
+alter table professor add dependentes int;
+
+update professor set dependentes = 3 where matricula = 4000;
+
+update professor set dependentes = 0 where matricula = 4001;
+
+update professor set dependentes = 2 where matricula = 4003;
+
+select aluno.nome, turma.definicao, turma.turno from aluno,turma,estuda where aluno.matricula = estuda.fk_Aluno_matricula and fk_turma_numero = turma.numero;
